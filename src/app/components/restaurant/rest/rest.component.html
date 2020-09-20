@@ -1,0 +1,39 @@
+
+<app-header></app-header>
+
+    
+<div class="text-center">
+   <h1>Ресторан "Марія"</h1>
+</div>
+<p class="col-md-11 offset-md-1" style="font-family: Snell Roundhand, cursive;font-size:20px">Ресторан &ldquo;Марія&rdquo; пропонує страви європейської та національної кухні, які задовольнять смаки найвибагливіших гурманів і не залишать їх байдужими до гармонійно підібраних компонентів страв.  Все це створює неповторний смак гастрономічних шедеврів, які Ви зможете доповнити різноманітними напоями, представленими в меню.  А дбайливе і ненав'язливе обслуговування допоможе Вам забути про буденні проблеми.</p>
+
+<hr>
+
+<div class="row">
+
+    <div class="col-md-6 col-lg-4 mb-5" *ngFor="let image of images; let i = index">
+        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1">
+            <img class="img-fluid hover-shadow cursor" src="{{image.image}}" alt="" (click)="openModal();currentSlide(i+1)" />
+        </div>
+    </div>
+    <div id="imgModal" class="slide-modal">
+        <span class="close cursor" (click)="closeModal()">&times;</span>
+        <div class="slide-modal-content">
+            <div class="img-slides" *ngFor="let image of images; let i = index">
+                <img src="{{image.image}}">
+            </div>
+            <a class="prev" (click)="plusSlides(-1)">&#10094;</a>
+            <a class="next" (click)="plusSlides(1)">&#10095;</a>
+            <div class="image-row">
+                <div class="image-column" *ngFor="let image of images; let i = index">
+                    <img class="images" (click)="currentSlide(i+1)" src="{{image.image}}">
+                </div>
+            </div>
+        </div>
+      </div>
+</div>
+
+
+
+
+<app-footer></app-footer>

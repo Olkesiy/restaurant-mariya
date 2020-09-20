@@ -1,0 +1,154 @@
+<app-header></app-header>
+<div class="text-center">
+    <h2 class="mb-5 font-weight-bold">Банкетний зал</h2>
+    <p style="font-family: Snell Roundhand, cursive;font-size:20px">Банкетний зал ресторану &ldquo;Mariya&rdquo; з радістю допоможе організувати Вам будь-яку подію: від ділової зустрічі, до романтичної вечері, ювілею чи весілля. Просторий банкетний зал, створений у вишуканому стилі, подарує неповторну атмосферу свята, а шеф-кухар ресторану запропонує Вам безліч смачних страв на будь-який смак. Також Ви можете насолодитися блюдами з мангалу, приготовленими на відкритому вогні та відпочити на літній терасі.</p>
+<p style="font-family: Snell Roundhand, cursive;font-size:20px">А ще, ми пропонуємо Вам унікальну послугу конференц-сервісу, яка включає повний спектр послуг: від оренди окремого конференц-залу до повноцінного обслуговування каво-перерв та обідів. В конференц-залі Ви зможете провести переговори, ділові зустрічі, наради, презентації, семінари, тренінги. До Ваших послуг користування фліп-чартом, мультимедійним проектором та екраном. Конференц-зал&nbsp;&nbsp; розрахований на 25 осіб.</p>
+<p style="font-family: Snell Roundhand, cursive;font-size:20px">Для наших наймолодших відвідувачів ресторану є майданчик для ігор поруч з банкетним залом.</p>
+<p style="font-family: Snell Roundhand, cursive;font-size:20px">Наш професійний і турботливий персонал гарантує високий рівень обслуговування, затишок та комфорт Вам та Вашим гостям.</p>
+</div>
+<hr>
+<div class="row">
+
+    <div class="col-md-6 col-lg-4 mb-5" *ngFor="let image of images; let i = index">
+        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1">
+            <img class="img-fluid hover-shadow cursor" src="{{image.image}}" alt="" (click)="openModal();currentSlide(i+1)" />
+        </div>
+    </div>
+    <div id="imgModal" class="slide-modal">
+        <span class="close cursor" (click)="closeModal()">&times;</span>
+        <div class="slide-modal-content">
+            <div class="img-slides" *ngFor="let image of images; let i = index">
+                <img src="{{image.image}}">
+            </div>
+            <a class="prev" (click)="plusSlides(-1)">&#10094;</a>
+            <a class="next" (click)="plusSlides(1)">&#10095;</a>
+            <div class="image-row">
+                <div class="image-column" *ngFor="let image of images; let i = index">
+                    <img class="images" (click)="currentSlide(i+1)" src="{{image.image}}">
+                </div>
+            </div>
+        </div>
+      </div>
+</div>
+
+
+<br>
+<br>
+<br>
+<br>
+<h2 style="padding-left: 800px;">Замовлення</h2>
+<br>
+<br>
+<br>
+
+
+<div class="col-md-15 mb-md-0 mb-5">
+    <form id="contact-form" name="contact-form" (submit)="addCom()"  action="" >
+
+        <!--Grid row-->
+        <div class="row">
+
+            <!--Grid column-->
+            <div class="col-md-6">
+                <div class="md-form mb-0">
+                    <label for="name" class="">І'мя</label>
+                    <input type="text" [(ngModel)]="name"  id="name" name="name" class="form-control">
+                    
+                </div>
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-md-6">
+                <div class="md-form mb-0">
+                    <label for="email" class="">Е-майл</label>
+                    <input type="email" [(ngModel)]="email"  id="email" name="email" class="form-control">
+                    
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="md-form mb-0">
+                    <label for="howmany" class="">Скільки людей?</label>
+                    <input type="number" [(ngModel)]="howmany"  id="howmany" name="howmany" class="form-control">
+                    
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="md-form mb-0">
+                    <label for="fun" class="">Формат забави </label>
+                    <!-- <input type="text"  id="time" name="time" class="form-control"> -->
+                    <select class="form-control" [(ngModel)]="fun" id="fun" name="fun">
+                        <option value="День народження"  >День народження</option>
+                        <option value="Похорон"  >Похорон</option>
+                        <option value="Хрестини"  >Хрестини</option>
+                        <option value="Весілля"  >Весілля</option>
+                        <option value="Поправнини"  >Поправнини</option>
+                        <option value="Інше"  >Інше</option>
+
+                    </select>
+                </div>
+            </div>
+            <!--Grid column-->
+
+        </div>
+        <!--Grid row-->
+
+        <!--Grid row-->
+        <div class="row">
+
+            <!--Grid column-->
+            <div class="col-md-6">
+                <div class="md-form mb-0">
+                    <label for="phone" class="">Телефон</label>
+                    <input type="text" [(ngModel)]="phone" id="phone"  name="phone" class="form-control">
+                    
+                </div>
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-md-6">
+                <div class="md-form mb-0">
+                    <label for="date" class="">Коли?</label>
+                    <input type="date" [(ngModel)]="date" id="date" name="date" class="form-control">
+                    
+                </div>
+            </div>
+            <!--Grid column-->
+
+        </div>
+        <!--Grid row-->
+
+        <!--Grid row-->
+        <div class="row">
+
+            <!--Grid column-->
+            <div class="col-md-12">
+
+                <div class="md-form">
+                    <label for="comment">Комент</label>
+                    <textarea type="text" [(ngModel)]="comment" id="comment" name="comment"  rows="2" class="form-control md-textarea"></textarea>
+                    
+                </div>
+
+            </div>
+        </div>
+        <!--Grid row-->
+<div class="text-center mt-4">
+
+        <button class="btn btn-warning btn-lg btn-block" type="submit">Замовити</button>
+    </div>
+    <br>
+    <br>
+    <br>
+
+    </form>
+
+
+    
+   
+  
+</div>
+
+
+<app-footer></app-footer> 

@@ -24,9 +24,16 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "./node_modules/ngx-bootstrap/datepicker/bs-datepicker.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+
+               "node_modules/jquery/dist/jquery.min.js",
+               
+               "src/assets/js/custom.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -88,9 +95,16 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "./node_modules/ngx-bootstrap/datepicker/bs-datepicker.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [],
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ]
+
           }
         },
         "lint": {
@@ -119,6 +133,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "bootstrap"
+    }
+  },
+  "defaultProject": "bootstrap",
+  "cli": {
+    "analytics": "ddad369e-1f07-489e-801f-3d957b28c5bf"
+  }
 }

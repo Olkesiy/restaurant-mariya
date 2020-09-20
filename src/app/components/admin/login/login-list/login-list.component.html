@@ -1,0 +1,41 @@
+<button type="button" class="btn btn-warning" routerLink="/listadmin"><---</button>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <button class="btn btn-warning pull-right" routerLink="/register" routerLinkActive="active" >ADD</button>
+
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>name</th>
+                        <th>email</th>
+                        <th>username</th>
+                        <th>password</th>
+                    </tr>
+                </thead>
+                <tbody *ngFor="let r of coms">
+                    <tr>
+                        <td>{{r.name}}</td>
+                        <td>{{r.email}}</td>
+                        <td>{{r.username}}</td>
+                        <td>{{r.passwordHash}}</td>
+                        <td>
+                          
+                            <button class="btn btn-warning"  (click)="remove(r)">Delete</button>
+                        </td>
+                        
+                    </tr>
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+

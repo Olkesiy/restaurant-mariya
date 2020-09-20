@@ -1,0 +1,72 @@
+<button type="button" class="btn btn-warning" routerLink="/listadmin"><---</button>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <button class="btn btn-warning pull-right" routerLink="/salat/add" routerLinkActive="active" >ADD</button>
+
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Gr/Pc</th>
+                        <th>Price</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody *ngFor="let r of coms">
+                    <tr>
+                        <td>{{r.name}}</td>
+                        <td>{{r.GrPc}}</td>
+                        <td>{{r.price}}</td>
+                        <td>
+                            <button class="btn btn-warning" routerLink="/salat/{{r.id}}" routerLinkActive="active">Edit</button>
+                            <span>__</span>
+                            <button class="btn btn-warning"  (click)="remove(r)">Delete</button>
+                        </td>
+                        
+                    </tr>
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <button class="btn btn-warning pull-right" routerLink="/imageSalat/add" routerLinkActive="active" >ADD</button>
+
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Image</th>
+                        <th>Action</th>
+                        
+                    </tr>
+                </thead>
+                <tbody *ngFor="let r of coms1">
+                    <tr>
+                        <td>{{r.image}}</td>
+                    
+                        <td>
+                           
+                            <button class="btn btn-warning"  (click)="removeI(r)">Delete</button>
+                        </td>
+                        
+                    </tr>
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</div>
+
+

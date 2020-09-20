@@ -1,0 +1,20 @@
+<button type="button" class="btn btn-warning" routerLink="/listimages"><---</button>
+
+<div class="col-md-4 offset-md-4">
+
+
+<h2>Add Post</h2>
+<hr>
+<form action="" (submit)="addPost()">
+  <div class="form-group">
+    <label for="image">Image</label>
+    <input type="file" id="image" class="form-control-file" (change)="uploadImage($event)" />
+    <br />
+    <img *ngIf="image" [src]="image" [alt]="image" height="200px">
+  </div>
+
+  
+
+  <button class="btn btn-warning"  >Add Post</button>
+</form>
+</div>

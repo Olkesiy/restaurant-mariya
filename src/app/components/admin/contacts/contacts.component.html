@@ -1,0 +1,49 @@
+<button type="button" class="btn btn-warning" routerLink="/listadmin"><---</button>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>How many</th>
+                        <th>Time</th>
+                        <th>Date</th>
+                        <th>Comment</th>
+                    </tr>
+                </thead>
+                <tbody *ngFor="let r of coms">
+                    <tr>
+                        <td>{{r.name}}</td>
+                        <td>{{r.email}}</td>
+                        <td>{{r.phone}}</td>
+                        <td>{{r.howmany}}</td>
+                        <td>{{r.time}}</td>
+                        <td>{{r.date}}</td>
+                        <td>{{r.comment}}</td>
+                        <td>
+                            <button class="btn btn-warning"  (click)="remove(r)">Delete</button>
+                        </td>
+                        
+                    </tr>
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+

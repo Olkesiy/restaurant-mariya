@@ -1,0 +1,4 @@
+<div *ngIf="coms.length===0" class="alert alert-warning">No Reviews to Display</div>
+<div *ngFor="let r of coms">
+    <app-item [comm]="r"></app-item>
+</div>

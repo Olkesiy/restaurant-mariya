@@ -1,0 +1,27 @@
+<button type="button" class="btn btn-warning" routerLink="/listfirstcourses"><---</button>
+
+<div *ngIf="salat"  class="col-md-8 offset-md-2">
+
+
+    <form action="" (submit)="updateTutorial()">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name"  class="form-control" [(ngModel)]="salat.name" name="name" >
+        </div>
+      
+        <div class="form-group">
+          <label for="GrPc">Gr/Pc</label>
+          <input id="GrPc" type="text" class="form-control"  [(ngModel)]="salat.GrPc" name="GrPc"
+            >
+        </div>
+      
+        <div class="form-group">
+          <label for="price">Price</label>
+          <input type="text" id="price" class="form-control"  [(ngModel)]="salat.price" name="price"
+         >
+        </div>
+      
+        <button class="btn btn-warning"  >Update</button>
+      </form>
+</div>
+  

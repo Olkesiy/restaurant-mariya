@@ -1,0 +1,167 @@
+<app-header></app-header>
+
+
+
+<section>
+    
+    <div class="card mb-4">
+      
+      <div class="row"  style="background-color: black;" >
+
+        <div class="col-md-6" *ngFor="let r of salatImage" >
+          <img src="{{r.image}}" width="1100px" class="img-fluid" alt="smaple image">
+  
+        </div>
+
+        <div class="col-md-6 p-5 align-self-center"    >
+
+          
+          <ul class="list-unstyled font-small mt-5 mb-0" *ngFor="let r of salat">
+            <li>
+              <h3  style="color: white;font-family: Snell Roundhand, cursive;font-size:20px" >{{r.name}} - {{r.GrPc}}gr - {{r.price}}$</h3>
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+
+<br>
+<section>
+    
+  <div class="card mb-4">
+    
+    <div class="row"  style="background-color: black;" >
+
+      
+
+      <div class="col-md-6 p-5 align-self-center"    >
+
+
+        <ul class="list-unstyled font-small mt-5 mb-0" *ngFor="let r of first">
+          <li>
+            <h3  style="color: white;font-family: Snell Roundhand, cursive;font-size:20px" >{{r.name}} - {{r.GrPc}}gr - {{r.price}}$</h3>
+          </li>
+
+        </ul>
+
+      </div>
+
+      <div class="col-md-6" *ngFor="let r of secondsImage" >
+        <img src="{{r.image}}" width="1100px" class="img-fluid" alt="smaple image">
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+
+<br>
+<section>
+    
+  <div class="card mb-4">
+    
+    <div class="row"  style="background-color: black;" >
+
+      <div class="col-md-6" *ngFor="let r of courcesImage" >
+        <img src="{{r.image}}" width="1100px" class="img-fluid" alt="smaple image">
+
+      </div>
+
+      <div class="col-md-6 p-5 align-self-center"    >
+
+        <ul class="list-unstyled font-small mt-5 mb-0" *ngFor="let r of courses">
+          <li>
+            <h3  style="color: white;font-family: Snell Roundhand, cursive;font-size:20px" >{{r.name}} - {{r.GrPc}}gr - {{r.price}}$</h3>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<br>
+<section>
+    
+  <div class="card mb-4">
+    
+    <div class="row"  style="background-color: black;" >
+
+     
+
+      <div class="col-md-6 p-5 align-self-center"    >
+
+        <ul class="list-unstyled font-small mt-5 mb-0" *ngFor="let r of second">
+          <li>
+            <h3  style="color: white;font-family: Snell Roundhand, cursive;font-size:20px" >{{r.name}} - {{r.GrPc}}gr - {{r.price}}$</h3>
+          </li>
+
+        </ul>
+
+      </div>
+
+      <div class="col-md-6" *ngFor="let r of firstImage" >
+        <img src="{{r.image}}" width="1100px" class="img-fluid" alt="smaple image">
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<br>
+<section>
+    
+  <div class="card mb-4">
+    
+    <div class="row"  style="background-color: black;" >
+
+      <div class="col-md-6" *ngFor="let r of drinksImage" >
+        <img src="{{r.image}}" width="1100px" class="img-fluid" alt="smaple image">
+
+      </div>
+
+      <div class="col-md-6 p-5 align-self-center"    >
+
+         <ul class="list-unstyled font-small mt-5 mb-0" *ngFor="let r of drink">
+          <li>
+            <h3  style="color: white;font-family: Snell Roundhand, cursive;font-size:20px" >{{r.name}} - {{r.price}}$</h3>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+<app-footer></app-footer>

@@ -1,0 +1,31 @@
+<button type="button" class="btn btn-warning" routerLink="/listfirstcourses"><---</button>
+<br>
+<br>
+<br>
+<div class="col-md-4 offset-md-4">
+
+
+<h2>Add First Courses</h2>
+<hr>
+<form action=""  (submit)="addPost()">
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" id="name" class="form-control" [(ngModel)]="name" name="name" >
+  </div>
+
+  <div class="form-group">
+    <label for="GrPc">Gr/Pc</label>
+    <textarea id="GrPc" class="form-control" [(ngModel)]="GrPc" name="GrPc"
+      ></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="price">Price</label>
+    <input type="text" id="price" class="form-control" [(ngModel)]="price" name="price"
+   >
+  </div>
+
+  <button class="btn btn-warning"  >Add </button>
+
+</form>
+</div>

@@ -1,0 +1,28 @@
+{
+  "reviews": [
+    {
+      "id": 1,
+      "name": "Oleksiy",
+      "email": "oleksiy@gmail.com",
+      "description": "very nice",
+      "date": "2018-05-05"
+    },
+    {
+      "id": 2,
+      "name": "Zorana",
+      "email": "zorana@gmail.com",
+      "description": "Cool",
+      "date": "2018-01-01"
+    },
+    {
+      "name": "Angelina",
+      "email": "angelina@gmail.com",
+      "description": "Veryyy",
+      "date": "2020-06-14T18:06:19.032Z",
+      "id": 3
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
